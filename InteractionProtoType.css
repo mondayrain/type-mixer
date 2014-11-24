@@ -1,0 +1,85 @@
+body, p
+{
+	padding: 0;
+	margin: 0;
+}
+
+/* DIVS IN GENERAL */
+
+#wrapper
+{
+	height: 100vh;
+	background-color: steelblue;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+/* LOGO */
+/* LATER: FIGURE OUT HOW TO VERTICALLY ALIGN IMG */
+#logo-div
+{
+	min-height: 10em;
+	height: 12vh;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#logo
+{
+	padding-top: 55px;
+	transform: scale(0.40);
+}
+
+
+/* CONTENT */
+#main-div
+{
+	height: 70vh;
+	display: table;
+	margin: 0 auto;
+}
+
+.type
+{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
+	padding-top: 80px;
+}
+
+#left-type
+{
+	margin: 0;
+}
+
+#right-type
+{
+	margin: 0;
+}
+
+/* BUTTONS */
+
+#buttons-div
+{
+	height: 12vh;
+	display: table;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+.button
+{
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	float: left;
+	vertical-align: middle;
+	text-align: center;
+}
