@@ -164,7 +164,7 @@ $(document).ready(function() {
 		$(element).animate(
 		{
 			backgroundColor: colour
-		});
+		}, 700); //Change this number to change # of milliseconds it takes to fade
 	}
 	
 
