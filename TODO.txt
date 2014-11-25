@@ -1,0 +1,17 @@
+TODO
+
+MON
+- Color fading functionality
+
+TUES
+- Add "Pair Type" button, with hover
+- Create "Pair Type" page
+
+THURS
+- Create "About" page
+
+FRI
+- Update all Typefaces
+- Refine graphics (make look ok on all browsers)
+- Find audio library
+- Confirm audio functionality

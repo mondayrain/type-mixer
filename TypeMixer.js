@@ -1,25 +1,43 @@
+/* --- GLOBALS --- */
+
+var BACKGROUND_COLOUR = "rgb(70,130,180)";
+var TRANSPARENCY = "0.3";
+
+var LEFT_IS_TRANSPARENT = false;
+var RIGHT_IS_TRANSPARENT = false;
 var LEFT_TYPE = "";
 var RIGHT_TYPE = "";
 
-var TYPE_DICT = {"button-one":"eames",
+var TYPE_DICT = {"button-one":"ziggurat",
 				 "button-two":"jenson",
 				 "button-three":"bodoni",
 				 "button-four":"knockout",
 				 "button-five":"futura",
 				 "button-six":"fette"};
 
-var TRANSPARENCY = "0.3";
-var LEFT_IS_TRANSPARENT = false;
-var RIGHT_IS_TRANSPARENT = false;
+var COLOUR_DICT = {"ziggurat":"rgb(246,146,30)",
+				   "jenson":"rgb(198,177,152)",
+				   "bodoni":"rgb(255,29,37)",
+				   "knockout":"rgb(139,159,63)",
+				   "futura":"rgb(105,219,230)",
+				   "fette":"rgb(77,77,77)"};
+
+var MIXED_COLOUR_DICT = {"futura_bodoni":"rgb(158,64,192)",
+						 "knockout_ziggurat":"rgb(182,186,33)",
+						 "fette_jenson":"rgb(117,76,36)"};
+
 
 var IMAGES_FOLDER = "images/"
 
+
 $(document).ready(function() {
+
 
 	$("#left-type-img").height(330);
 	$("#left-type-img").width(460);
 	$("#right-type-img").height(330);
 	$("#right-type-img").width(500);
+
 
 	$(".button").click(function()
 	{
@@ -39,7 +57,11 @@ $(document).ready(function() {
 			var regurl = id.concat('-reg.png');
 			$(this).children("img").attr("src", IMAGES_FOLDER.concat(regurl));
 		}
+
+		change_background();
 	});
+
+
 
 	$(".button").hover(function()
 	{
@@ -101,28 +123,52 @@ $(document).ready(function() {
 		}
 	});
 
-	/* TYPE HOVER HELPERS*/
-	/*
-	var hover_type = function(typename)
+	/* --- CHANGE BACKGROUND COLOUR --- */
+	var change_background = function()
 	{
 		if ((LEFT_TYPE != "") && (RIGHT_TYPE != ""))
 		{
-			return false;
+			var possible_type = (LEFT_TYPE.concat("_")).concat(RIGHT_TYPE);
+			if (possible_type in MIXED_COLOUR_DICT)
+			{
+				fade_colour("#wrapper", MIXED_COLOUR_DICT[possible_type]);
+				return true;
+			}
+
+			var possible_type = (RIGHT_TYPE.concat("_")).concat(LEFT_TYPE);
+			if (possible_type in MIXED_COLOUR_DICT)
+			{
+				fade_colour("#wrapper", MIXED_COLOUR_DICT[possible_type]);
+				return true;
+			}
 		}
+
 		else if (LEFT_TYPE)
 		{
-			change_right_type(typename, false);
-			return true;
+			fade_colour("#wrapper", COLOUR_DICT[LEFT_TYPE]);
 		}
+
+		else if (RIGHT_TYPE)
+		{
+			fade_colour("#wrapper", COLOUR_DICT[RIGHT_TYPE]);			
+		}
+
 		else
 		{
-			change_left_type(typename, false);
-			return true;
+			fade_colour("#wrapper", BACKGROUND_COLOUR);
 		}
 	}
-	*/
 
-	/* TYPE CHANGE HELPERS*/
+	var fade_colour = function(element, colour)
+	{
+		$(element).animate(
+		{
+			backgroundColor: colour
+		});
+	}
+	
+
+	/* --- CHANGE TYPE --- */
 	var change_type = function(typename)
 	{
 		// If the type is used, just remove it
