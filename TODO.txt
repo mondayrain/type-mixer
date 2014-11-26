@@ -8,7 +8,7 @@ TUES
 - Create "Pair Type" page
 
 THURS
-- Create "About" page
+- 
 
 FRI
 - Update all Typefaces
