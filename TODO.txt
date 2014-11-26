@@ -7,11 +7,18 @@ TUES
 - Add "Pair Type" button, with hover
 - Create "Pair Type" page
 
-THURS
-- Create "About" page
+WEDS
+- Find Typeface library for using custom typefaces
 
-FRI
-- Update all Typefaces
-- Refine graphics (make look ok on all browsers)
+THURS
 - Find audio library
 - Confirm audio functionality
+- Fix "Pair Type" page 'cause it's ugly
+
+FRI
+- Update all Typefaces to final choices
+- Store info for different typefaces on Paired page
+- Work on cross-browser compatability
+
+MON NIGHT
+- Refine graphics (pixel push)

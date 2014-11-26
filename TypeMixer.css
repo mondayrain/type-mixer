@@ -4,20 +4,18 @@ body, p
 	margin: 0;
 }
 
-/* DIVS IN GENERAL */
+/* ----- MAIN PAGE ----- */
 
 #wrapper
 {
 	height: 100vh;
-	background-color: steelblue;
-	text-align: center;
+	background-color: slategrey;
 	vertical-align: middle;
 	padding: 0;
 	margin: 0;
+	overflow: auto;
 }
 
-/* LOGO */
-/* LATER: FIGURE OUT HOW TO VERTICALLY ALIGN IMG */
 #logo-div
 {
 	min-height: 10em;
@@ -77,9 +75,88 @@ body, p
 	margin: 0;
 	padding-top: 0;
 	padding-bottom: 0;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	float: left;
 	vertical-align: middle;
 	text-align: center;
+}
+
+#pair-type
+{
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 100px;
+	float: left;
+	vertical-align: middle;
+}
+
+/* ----- PAIRED PAGE ----- */
+/* HEADER */
+#paired-page
+{
+	display: none;
+	vertical-align: middle;
+	text-align: center;	
+}
+
+#paired-image
+{
+	padding: 0;
+	margin: 0;
+}
+
+#paired-info-page
+{
+	padding: 0;
+	margin: 0;
+}
+
+#paired-info-header
+{
+	min-height: 10em;
+	vertical-align: middle;
+	text-align: center;
+}
+
+h3
+{
+	font-style: italic;
+}
+
+#paired-info-text
+{
+
+}
+
+#back-button-div.centre
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+#back-button
+{
+	color: silver;
+	margin: auto;
+	display: inline-block;
+	font-size: 150%;
+}
+
+/* INFORMATION */
+#paired-type-info
+{
+	min-height: 10em;
+	text-align: center;
+}
+
+#paired-type-one-div, #paired-type-two-div
+{
+	vertical-align: middle;
+	text-align: center;
+	float: left;
 }
