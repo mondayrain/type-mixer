@@ -4,6 +4,25 @@ body, p
 	margin: 0;
 }
 
+/* ---- FONTS ----*/
+@font-face
+{
+	font-family: openSans;
+	src: url(fonts/open_sans_regular.ttf)
+}
+
+@font-face
+{
+	font-family: openSansBold;
+	src: url(fonts/open_sans_bold.ttf)
+}
+
+@font-face
+{
+	font-family: openSansItalic;
+	src: url(fonts/open_sans_italic.ttf)
+}
+
 /* ----- MAIN PAGE ----- */
 
 #wrapper
@@ -19,7 +38,7 @@ body, p
 #logo-div
 {
 	min-height: 10em;
-	height: 12vh;
+	height: 15vh;
 	vertical-align: middle;
 	text-align: center;
 }
@@ -97,20 +116,44 @@ body, p
 #paired-page
 {
 	display: none;
-	vertical-align: middle;
-	text-align: center;	
+	margin: 0 auto;
 }
 
 #paired-image
 {
 	padding: 0;
 	margin: 0;
+	display: block;
+}
+
+#paired-image img
+{
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 #paired-info-page
 {
 	padding: 0;
 	margin: 0;
+	display: block;
+}
+
+h1
+{
+	font-family: openSansBold;
+	padding: 0;
+	margin: 0;
+}
+
+h2
+{
+	font-family: openSansItalic;
+	font-weight: normal;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 
 #paired-info-header
@@ -120,22 +163,18 @@ body, p
 	text-align: center;
 }
 
-h3
-{
-	font-style: italic;
-}
-
 #paired-info-text
 {
-
+	font-family: openSans;
+	margin-bottom: 15px;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 
-#back-button-div.centre
+#back-button-div
 {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin: 0 auto;
 
 }
 
@@ -143,8 +182,9 @@ h3
 {
 	color: silver;
 	margin: auto;
-	display: inline-block;
-	font-size: 150%;
+	font-size: 100%;
+	font-family: openSans;
+	margin: 10px;
 }
 
 /* INFORMATION */
@@ -152,6 +192,7 @@ h3
 {
 	min-height: 10em;
 	text-align: center;
+	display: block;
 }
 
 #paired-type-one-div, #paired-type-two-div
@@ -159,4 +200,36 @@ h3
 	vertical-align: middle;
 	text-align: center;
 	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.type-header
+{
+	font-family: openSansBold;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.type-place
+{
+	font-family: openSansItalic;
+
+}
+
+.type-type
+{
+	font-family: openSansItalic;
+}
+
+.type-image
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.type-info
+{
+	font-family: openSans;
 }
