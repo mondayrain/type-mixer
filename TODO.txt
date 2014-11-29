@@ -15,8 +15,7 @@ THURS
 - Confirm possibility of audio functionality (DONE)
 
 FRI
-- Update all Typefaces to final choices
-- Store info for different typefaces on Paired page
+- Update all Typefaces to final choices (DONE)
 - Fix audio looping delay problem
 - Write up structure for future audio functionality
 
@@ -25,3 +24,4 @@ SUN
 
 MON NIGHT
 - Refine graphics - pixel push with Cheryl
+- Store info for different typefaces on Paired page

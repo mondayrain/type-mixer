@@ -1,8 +1,9 @@
 /* --- GLOBALS --- */
 
-var BACKGROUND_COLOUR = "rgb(112,128,144)";
+var BACKGROUND_COLOUR = "rgb(65,65,65)";
 var TRANSPARENCY = "0.3";
 
+var NUMBER_OF_TYPEFACES = 6
 var PAIR_IS_CLICKED = false;
 var LEFT_IS_TRANSPARENT = false;
 var RIGHT_IS_TRANSPARENT = false;
@@ -16,23 +17,35 @@ var TYPE_DICT = {"button-one":"ziggurat",
 				 "button-five":"futura",
 				 "button-six":"fette"};
 
-var COLOUR_DICT = {"ziggurat":"rgb(246,146,30)",
-				   "jenson":"rgb(198,177,152)",
-				   "bodoni":"rgb(255,29,37)",
+var COLOUR_DICT = {"ziggurat":"rgb(250,181,0)",
+				   "jenson":"rgb(197,184,158)",
+				   "bodoni":"rgb(239,64,65)",
 				   "knockout":"rgb(139,159,63)",
 				   "futura":"rgb(105,219,230)",
 				   "fette":"rgb(77,77,77)"};
 
-var MIXED_COLOUR_DICT = {"futura_bodoni":"rgb(158,64,192)",
+var MIXED_COLOUR_DICT = {"futura_bodoni":"rgb(94,55,107)",
+						 "futura_knockout":"rgb(124,194,146)",
+						 "futura_ziggurat":"rgb(115,153,63)",
+						 "futura_fette":"rgb(43,64,133)",
+						 "futura_jenson":"rgb(119,205,226)",
+						 "bodoni_ziggurat":"rgb(243,111,37)",
+						 "bodoni_fette":"rgb(119,15,46)",
+						 "bodoni_jenson":"rgb(240,153,145)",
 						 "knockout_ziggurat":"rgb(182,186,33)",
-						 "fette_jenson":"rgb(117,76,36)"};
+						 "knockout_bodoni":"rgb(117,76,36)",
+						 "knockout_ziggurat":"rgb(208,193,43)",
+						 "knockout_fette":"rgb(69,85,24)",
+						 "knockout_jenson":"rgb(208,193,43)",
+						 "ziggurat_fette":"rgb(167,111,12)",
+						 "ziggurat_jenson":"rgb(226,175,84)",
+						 "fette_jenson":"rgb(117,76,36)",
+						};
 
-var MUSIC_DICT = {"ziggurat":"guitar",
-				   "jenson":"guiar",
-				   "bodoni":"guitar",
-				   "knockout":"drums",
-				   "futura":"drums",
-				   "fette":"drums"};
+var MUSIC_DICT = {"futura":"drums.ogg",
+				   "fette":"guitar.ogg"};
+var MUSIC_LENGTH_DICT = {"futura":600,
+						 "fette":1300}
 
 var IMAGES_FOLDER = "images/"
 var MUSIC_FOLDER = "music/"
@@ -40,8 +53,7 @@ var MUSIC_FOLDER = "music/"
 
 $(document).ready(function() {
 
-	//Prepare for audio playback
-	var manifest = [
+	/*var manifest = [
 		{id:"guitar", src:"guitar.ogg"},
 		{id:"drums", src:"drums.ogg"}];
     createjs.Sound.registerManifest(manifest, MUSIC_FOLDER);
@@ -50,7 +62,7 @@ $(document).ready(function() {
     var drum_track = createjs.Sound.createInstance("drums")
 
     guitar_track.play({loop:-1, volume:0});
-    drum_track.play({loop:-1, volume:0});
+    drum_track.play({loop:-1, volume:0});*/
 
 	//Ensure opening type images are the right size
 	$("#left-type-img").height(330);
@@ -344,22 +356,5 @@ $(document).ready(function() {
 	/* --- PLAY MUSIC --- */
 	var update_music = function()
 	{
-		if (LEFT_TYPE != "")
-		{
-			guitar_track.setVolume(0.5);
-		}
-		else
-		{
-			guitar_track.setVolume(0);
-		}
-
-		if (RIGHT_TYPE != "")
-		{
-			drum_track.setVolume(0.5);
-		}
-		else
-		{
-			drum_track.setVolume(0);
-		}
 	}
 });
