@@ -16,12 +16,12 @@ THURS
 
 FRI
 - Update all Typefaces to final choices (DONE)
-- Fix audio looping delay problem
-- Write up structure for future audio functionality
+- Fix audio looping delay problem (DONE)
+- Write up structure for future audio functionality (DONE)
 
 SUN
 - Fix "Pair Type" page 'cause it's ugly
 
 MON NIGHT
 - Refine graphics - pixel push with Cheryl
-- Store info for different typefaces on Paired page
+- Store info for different typefaces on Paired page (DONE)
