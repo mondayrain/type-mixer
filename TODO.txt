@@ -1,0 +1,27 @@
+TODO
+
+MON
+- Color fading functionality (DONE)
+
+TUES
+- Add "Pair Type" button, with hover (DONE)
+- Create "Pair Type" page (DONE)
+
+WEDS
+- Find Typeface library for using custom typefaces (DONE)
+
+THURS
+- Find audio library (DONE)
+- Confirm possibility of audio functionality (DONE)
+
+FRI
+- Update all Typefaces to final choices (DONE)
+- Fix audio looping delay problem (DONE)
+- Write up structure for future audio functionality (DONE)
+
+SUN
+- Fix "Pair Type" page 'cause it's ugly
+
+MON NIGHT
+- Refine graphics - pixel push with Cheryl
+- Store info for different typefaces on Paired page (DONE)
