@@ -136,10 +136,10 @@ $(document).ready(function() {
 	}
 
 	//Ensure opening images are the right size
-	$("#left-type-img").height(330);
-	$("#left-type-img").width(460);
-	$("#right-type-img").height(330);
-	$("#right-type-img").width(500);
+	$("#left-type-img").height(360);
+	$("#left-type-img").width(552);
+	$("#right-type-img").height(360);
+	$("#right-type-img").width(600);
 
 	 /*------------------------*/
 	/* -- HOVER AND CLICK  -- */
