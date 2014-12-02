@@ -3,6 +3,7 @@
    /*------------------------*/
 
 var BACKGROUND_COLOUR = "rgb(59,59,60)"
+PAIRED_PAGE_BKG_COLOR = "rgb(226,227,228)"
 var TRANSPARENCY = "0.3"
 var LOOP_VOLUME = 50
 var SONG_VOLUME = 100
@@ -174,7 +175,7 @@ $(document).ready(function() {
 
 			}
 		update_loop(typename);
-		change_background();
+		change_background(false);
 		}
 
 		/* PAIR BUTTON */
@@ -196,12 +197,16 @@ $(document).ready(function() {
 		/* BACK BUTTON */
 		else
 		{
+		/*prepare_main_page() */
+		
 			$("#paired-page").fadeOut("slow", function()
 			{
 				$("#main-page").fadeIn("slow");
 			});
 
 			update_song(false);
+			change_background();
+			$("#logo").attr("src", "images/buttons_and_typefaces/logo_main.png");
 		}
 	});
 
@@ -255,7 +260,7 @@ $(document).ready(function() {
 		/* BACK BUTTONS */
 		else
 		{
-			$("#back-button").css("color", "white");
+			$("#try-again-button").attr("src", "images/buttons_and_typefaces/try_again_hover.png");
 		}
 	},
 
@@ -303,7 +308,7 @@ $(document).ready(function() {
 			/* BACK / FORWARD BUTTONS */
 			else
 			{
-				$("#back-button").css("color", "silver");
+								$("#try-again-button").attr("src","images/buttons_and_typefaces/try_again_reg.png");
 			}
 		});
 
@@ -425,9 +430,9 @@ $(document).ready(function() {
 		}
 	}
 
-	 /*----------------------------*/
-	/* -- PREPARE PAIRED PAGE  -- */
-   /*----------------------------*/
+	 /*---------------------------------*/
+	/* -- PREPARE PAIRED/MAIN PAGE  -- */
+   /*---------------------------------*/
 
 	var prepare_paired_page = function()
 	{
@@ -467,6 +472,13 @@ $(document).ready(function() {
 		$("#paired-type-two-img").attr("src", RESULT_SAMPLES_PATH.concat(RIGHT_TYPE.concat("_img.png")));
 		$("#paired-type-one-info").text(BLURB_DICT[LEFT_TYPE]);
 		$("#paired-type-two-info").text(BLURB_DICT[RIGHT_TYPE]);
+		
+		// Change background colour
+		fade_colour("#wrapper", PAIRED_PAGE_BKG_COLOR)
+		fade_colour("#paired-page", PAIRED_PAGE_BKG_COLOR)
+		
+		// Change logo
+		$("#logo").attr("src", "images/buttons_and_typefaces/logo_paired.png");
 	}
 
 	/* --- PLAY MUSIC --- */
