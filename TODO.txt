@@ -20,8 +20,8 @@ FRI
 - Write up structure for future audio functionality (DONE)
 
 SUN
-- Fix "Pair Type" page 'cause it's ugly
+- Fix "Pair Type" page 'cause it's ugly (DONE)
 
 MON NIGHT
-- Refine graphics - pixel push with Cheryl
+- Refine graphics - pixel push with Cheryl (DONE)
 - Store info for different typefaces on Paired page (DONE)

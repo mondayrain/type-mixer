@@ -16,7 +16,6 @@ var RIGHT_TYPE = ""
 var TYPEFACE_LIST = ["futura", "jenson", "ziggurat", "bodoni",
 				 "knockout", "fette"]
 
-
 var TYPEFACE_DICT = {"button-one":"futura",
 				 "button-two":"jenson",
 				 "button-three":"ziggurat",
@@ -144,7 +143,6 @@ $(document).ready(function() {
 
 	$("#try-again-button").css("padding-left", (button_width/2)-(button_width));
 	$("#try-again-button").css("padding-top", -(button_height/2)-(button_height));
-
 
 	 /*------------------------*/
 	/* -- HOVER AND CLICK  -- */
