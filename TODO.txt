@@ -1,27 +1,14 @@
-TODO
+# TODO
 
-MON
-- Color fading functionality (DONE)
+HIGH
+- Fix audio loop lag problem
 
-TUES
-- Add "Pair Type" button, with hover (DONE)
-- Create "Pair Type" page (DONE)
+MEDIUM
+- Fix compatibility issues with different browsers and screen sizes
+- Refactor out the 10000 constants and create system where JS script reads off text files for filenames
+- Refine/redo paired graphics
 
-WEDS
-- Find Typeface library for using custom typefaces (DONE)
+LOW
+- Finish paired songs/find musician
+- Add created by links
 
-THURS
-- Find audio library (DONE)
-- Confirm possibility of audio functionality (DONE)
-
-FRI
-- Update all Typefaces to final choices (DONE)
-- Fix audio looping delay problem (DONE)
-- Write up structure for future audio functionality (DONE)
-
-SUN
-- Fix "Pair Type" page 'cause it's ugly (DONE)
-
-MON NIGHT
-- Refine graphics - pixel push with Cheryl (DONE)
-- Store info for different typefaces on Paired page (DONE)
