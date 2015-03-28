@@ -13,6 +13,13 @@ var RIGHT_IS_TRANSPARENT = false
 var LEFT_TYPE = ""
 var RIGHT_TYPE = ""
 
+var PAIRED_CONGRATS = ["Congratulations!", "You've made a successful type pairing."]
+var PAIRED_QUIRKY = ["What a quirky, charming combination!", "You've made a successful type pairing."]
+var PAIRED_OFF = ["Oooh... that's a little bit off.", "That's a weird combination, but it could work."]
+var PAIRED_BAD = ["Hmm. This doesn’t look quite right.", "Not the best pairing. Try again!"]
+
+
+
 var TYPEFACE_LIST = ["futura", "jenson", "ziggurat", "bodoni",
 				 "knockout", "fette"]
 
@@ -78,21 +85,21 @@ var BLURB_DICT =
 }
 
 var MIXED_TYPE_DICT = {
-					   "futura_bodoni":"Congratulations, you’ve made a successful type pairing. Bodoni and Futura go together well because they both share a geometric structure and sharp edges. They also compliment each other, with Futura being a clean and utilitarian sans serif, and Bodoni being a decorative serif. Together they make a classy but cutting edge combination, just like an electronica-infused symphony orchestra.",
-					   "futura_knockout":"Congratulations, you’ve made a successful type pairing. Futura and Knockout make great friends - they’re both don’t have too much contrast between the thick and thins strokes, and both are versatile and can be used for either long bodies of texts or headlines. Together, they’re like partners in crime, and make something like electro-rock trendy and catchy.",
-					   "futura_ziggurat":"Oooh… that’s a little bit off, isn’t it? Futura and Ziggurat aren’t the most charming couple, with one being an understated and utilitarian sans serif made for the Bauhaus in the 1920’s, and the other being an attention-demanding slab serif with a country flair. Unfortunately the contrast is too much for the pair to handle, as is electro-country music.",
-					   "futura_fette":"What a quirky, but charming combination! Futura and Fette Fraktur are a bit of an odd couple. Futura and Fette Fraktur, despite being from different time eras and having different principles, still find kinship in each other’s sharp edges. Weird, but good - just like electronica-inspired chorale.",
-					   "futura_jenson":"What a quirky, but charming combination! Futura and Jenson share very different influences - Futura is a utilitarian sans serif that values the geometrical, while Jenson is an calligraphy-inspired old style typeface. However, they both share the value of being minimal and non-decorative, with the intent of being readable (whether Futura actually achieves that is questionable though).",
-					   "bodoni_ziggurat":"Hmm. This doesn’t look quite right. Ziggurat and Bodoni can’t seem to agree on anything. Ziggurat is a slab serifs that is loud, chunky, and with a twang of good ol’ country. Bodoni is an elegant serif that is rational and calculated in its geometrical forms and is always appearing on the cover of Vogue. They are both attention-seeking typefaces, but they just can’t compete with each other - their differences only serves to drive them a part.",
-					   "bodoni_fette":"Congratulations, you’ve made a successful type pairing. Bodoni and Fette Fraktur are both members of the upper class. Bodoni was made with the intention of only being read by those of royalty, while Fette was designed specifically for a Roman Emperor. They are also both sharp in its visual elements, tall and upright in its stance. Together, they make a classy pairing that is used by only those who want to appeal to the bourgeoisie. ",
-					   "bodoni_jenson":"Congratulations, you’ve made a successful type pairing. Bodoni and Jenson are quite similar in that they are both serifs, but they’re not too similar. Bodoni is more flashy with its high contrast in its thick and thin strokes and rational with its geometric construction, and Jenson is more humanistic and old-fashioned in its reference to calligraphy. With just enough differences, they make for a great serif-and-serif pairing.",
-					   "knockout_bodoni":"Congratulations, you’ve made a successful type pairing. Although Bodoni and Knockout are polar opposites - Bodoni is very classy, a bit hard to read (thanks to those thick and thin strokes), and will always be seen on an issue of Vogue, whereas Knockout is lean and thin, dominant and attention-catching, and versatile through all its weights. Together, they make a power couple that enhance each other based on their differences.",
-					   "knockout_ziggurat":"Ziggurat and Knockout are a power couple made for each other - they are both made in the industrial age to be loud and attention-seeking. Their differences enhance each other - Knockout’s tall and non-decorative demeanor only lets Ziggurat’s funkiness and country tendencies shine through. Their pairing is as funky-fantastic as a Bluegrass Jamboree Festival on a hot summer day.",
-					   "knockout_fette":"What a quirky, but charming combination! Fette Fraktur and Knockout are quite an odd pair, both coming from wildly different backgrounds. While Knockout is made for advertisement in the industrial age in Britain, Fette Fraktur is made for royalty in the 15th century for Holy Roman Emperors. However, they both stand tall, upright, and both seek attention. Together they make for something odd but powerful and strong like Rock Opera.",
-					   "knockout_jenson":"Hmm. This doesn’t look quite right. Jenson and Knockout are too contrasting to settle their glaring differences. Jenson is an elegant, oldstyle typeface made for quiet reading and mellow woodwind tunes, while Knockout is attention-seeking and loud, and won’t settle for anything less than rock ‘n’ roll. They can’t even agree on anything, including genres of music.",
-					   "ziggurat_fette":"Hmm. This doesn’t look quite right. Fette Fraktur and Ziggurat are so opposite in style and background that they refuse to go together. Whereas Fette Fraktur is high class and was made for Holy Roman Emperors in the 15th century, Ziggurat was made to catch attention in advertisements in the industrial age, with ol’ American country values. Together, their contrast is just too much to handle - much like Country Chorale.)",
-					   "ziggurat_jenson":"Hmm. This doesn’t look quite right. Jenson and Ziggurat are just too different to settle their glaring differences, no matter how charming each of them are. Jenson is an elegant, oldstyle typeface made for quiet reading and mellow tunes, and it simply can’t compromise with the country-tinged, attention-seeking, banjo-bashing tendencies of Ziggurat. Their pairing is as awkward as a Banjo Bonanza attempted by a classic windwind ensemble.",
-					   "fette_jenson":"Congratulations, you’ve made a successful type pairing. Fette Fraktur and Jenson are a match made in heaven - or at least, a match made in the Bible. These two typefaces were both made to be used in the Bible, which at that time was only accessible to the higher class (along with other printed matter). They are indeed the holiest and noblest of all combinations."
+					   "futura_bodoni":[PAIRED_CONGRATS, "Bodoni and Futura go together well because they both share a geometric structure and sharp edges. They also compliment each other, with Futura being a clean and utilitarian sans serif, and Bodoni being a decorative serif. Together they make a classy but cutting edge combination, just like an electronica-infused symphony orchestra."],
+					   "futura_knockout":[PAIRED_CONGRATS, "Futura and Knockout make great friends - they’re both don’t have too much contrast between the thick and thins strokes, and both are versatile and can be used for either long bodies of texts or headlines. Together, they’re like partners in crime, and make something like electro-rock trendy and catchy."],
+					   "futura_ziggurat":[PAIRED_OFF, "Oooh… that’s a little bit off, isn’t it? Futura and Ziggurat aren’t the most charming couple, with one being an understated and utilitarian sans serif made for the Bauhaus in the 1920’s, and the other being an attention-demanding slab serif with a country flair. Unfortunately the contrast is too much for the pair to handle, as is electro-country music."],
+					   "futura_fette":[PAIRED_QUIRKY, "Futura and Fette Fraktur are a bit of an odd couple. Futura and Fette Fraktur, despite being from different time eras and having different principles, still find kinship in each other’s sharp edges. Weird, but good - just like electronica-inspired chorale."],
+					   "futura_jenson":[PAIRED_QUIRKY, "Futura and Jenson share very different influences - Futura is a utilitarian sans serif that values the geometrical, while Jenson is an calligraphy-inspired old style typeface. However, they both share the value of being minimal and non-decorative, with the intent of being readable (whether Futura actually achieves that is questionable though)."],
+					   "bodoni_ziggurat":[PAIRED_BAD, "Ziggurat and Bodoni can’t seem to agree on anything. Ziggurat is a slab serifs that is loud, chunky, and with a twang of good ol’ country. Bodoni is an elegant serif that is rational and calculated in its geometrical forms and is always appearing on the cover of Vogue. They are both attention-seeking typefaces, but they just can’t compete with each other - their differences only serves to drive them a part."],
+					   "bodoni_fette":[PAIRED_CONGRATS, "Bodoni and Fette Fraktur are both members of the upper class. Bodoni was made with the intention of only being read by those of royalty, while Fette was designed specifically for a Roman Emperor. They are also both sharp in its visual elements, tall and upright in its stance. Together, they make a classy pairing that is used by only those who want to appeal to the bourgeoisie. "],
+					   "bodoni_jenson":[PAIRED_CONGRATS, "Bodoni and Jenson are quite similar in that they are both serifs, but they’re not too similar. Bodoni is more flashy with its high contrast in its thick and thin strokes and rational with its geometric construction, and Jenson is more humanistic and old-fashioned in its reference to calligraphy. With just enough differences, they make for a great serif-and-serif pairing."],
+					   "knockout_bodoni":[PAIRED_CONGRATS, "Although Bodoni and Knockout are polar opposites - Bodoni is very classy, a bit hard to read (thanks to those thick and thin strokes), and will always be seen on an issue of Vogue, whereas Knockout is lean and thin, dominant and attention-catching, and versatile through all its weights. Together, they make a power couple that enhance each other based on their differences."],
+					   "knockout_ziggurat":[PAIRED_CONGRATS, "Ziggurat and Knockout are a power couple made for each other - they are both made in the industrial age to be loud and attention-seeking. Their differences enhance each other - Knockout’s tall and non-decorative demeanor only lets Ziggurat’s funkiness and country tendencies shine through. Their pairing is as funky-fantastic as a Bluegrass Jamboree Festival on a hot summer day."],
+					   "knockout_fette":[PAIRED_QUIRKY, "Fette Fraktur and Knockout are quite an odd pair, both coming from wildly different backgrounds. While Knockout is made for advertisement in the industrial age in Britain, Fette Fraktur is made for royalty in the 15th century for Holy Roman Emperors. However, they both stand tall, upright, and both seek attention. Together they make for something odd but powerful and strong like Rock Opera."],
+					   "knockout_jenson":[PAIRED_BAD, "Jenson and Knockout are too contrasting to settle their glaring differences. Jenson is an elegant, oldstyle typeface made for quiet reading and mellow woodwind tunes, while Knockout is attention-seeking and loud, and won’t settle for anything less than rock ‘n’ roll. They can’t even agree on anything, including genres of music."],
+					   "ziggurat_fette":[PAIRED_BAD, "Fette Fraktur and Ziggurat are so opposite in style and background that they refuse to go together. Whereas Fette Fraktur is high class and was made for Holy Roman Emperors in the 15th century, Ziggurat was made to catch attention in advertisements in the industrial age, with ol’ American country values. Together, their contrast is just too much to handle - much like Country Chorale.)"],
+					   "ziggurat_jenson":[PAIRED_BAD, "Jenson and Ziggurat are just too different to settle their glaring differences, no matter how charming each of them are. Jenson is an elegant, oldstyle typeface made for quiet reading and mellow tunes, and it simply can’t compromise with the country-tinged, attention-seeking, banjo-bashing tendencies of Ziggurat. Their pairing is as awkward as a Banjo Bonanza attempted by a classic windwind ensemble."],
+					   "fette_jenson":[PAIRED_CONGRATS, "Fette Fraktur and Jenson are a match made in heaven - or at least, a match made in the Bible. These two typefaces were both made to be used in the Bible, which at that time was only accessible to the higher class (along with other printed matter). They are indeed the holiest and noblest of all combinations."]
 					}
 						
 
@@ -131,8 +138,8 @@ $(document).ready(function() {
 	//Ensure opening images are the right size
 	var w = window.innerWidth;
 	var h = window.innerHeight;
-	var left_img_wh_ratio = 1.53;
-	var right_img_wh_ratio = 1.66;
+	var left_img_wh_ratio = 1.45;
+	var right_img_wh_ratio = 1.45;
 	$("#left-type-img").height(h*0.41);
 	$("#left-type-img").width(h*0.41*left_img_wh_ratio);
 	$("#right-type-img").height(h*0.41);
@@ -435,31 +442,50 @@ $(document).ready(function() {
 
 	var prepare_paired_page = function()
 	{
-		$("#paired-type-one").html(LEFT_TYPE);
-		$("#paired-type-two").html(RIGHT_TYPE);
+		if (LEFT_TYPE == "fette")
+		{
+			$("#paired-type-one").html((LEFT_TYPE.charAt(0).toUpperCase() + LEFT_TYPE.slice(1)).concat(" Fraktur"));
+		}
+		else
+		{
+			$("#paired-type-one").html(LEFT_TYPE.charAt(0).toUpperCase() + LEFT_TYPE.slice(1));
+		}
 
-		// Prepare poster image
+		if (RIGHT_TYPE == "fette")
+		{
+			$("#paired-type-two").html((RIGHT_TYPE.charAt(0).toUpperCase() + RIGHT_TYPE.slice(1)).concat(" Fraktur"));
+		}
+		else
+		{
+			$("#paired-type-two").html(RIGHT_TYPE.charAt(0).toUpperCase() + RIGHT_TYPE.slice(1));
+		}
+
+		// Prepare headers and poster image
 		var potential_image_name = LEFT_TYPE.concat("_").concat(RIGHT_TYPE)
 		if (potential_image_name in MIXED_COLOUR_DICT)
 		{
 			$("#paired-image").attr("src", RESULT_IMAGES_PATH.concat(potential_image_name.concat(".png")));
+			$("#paired-info-header").children("h1").text(MIXED_TYPE_DICT[potential_image_name][0][0])
+			$("#paired-info-header").children("h2").text(MIXED_TYPE_DICT[potential_image_name][0][1])
 		}
 		else
 		{
 			potential_image_name = RIGHT_TYPE.concat("_").concat(LEFT_TYPE)
 			$("#paired-image").attr("src", RESULT_IMAGES_PATH.concat(potential_image_name.concat(".png")));
+			$("#paired-info-header").children("h1").text(MIXED_TYPE_DICT[potential_image_name][0][0])
+			$("#paired-info-header").children("h2").text(MIXED_TYPE_DICT[potential_image_name][0][1])
 		}
 
 		// Prepare info text
 		var potential_info_name = LEFT_TYPE.concat("_").concat(RIGHT_TYPE)
 		if (potential_info_name in MIXED_TYPE_DICT)
 		{
-			$("#paired-info-text").text(MIXED_TYPE_DICT[potential_info_name]);
+			$("#paired-info-text").text(MIXED_TYPE_DICT[potential_info_name][1]);
 		}
 		else
 		{
 			potential_info_name = RIGHT_TYPE.concat("_").concat(LEFT_TYPE)
-			$("#paired-info-text").text(MIXED_TYPE_DICT[potential_info_name]);
+			$("#paired-info-text").text(MIXED_TYPE_DICT[potential_info_name][1]);
 		}
 
 		// Individual information
