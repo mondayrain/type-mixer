@@ -106,7 +106,7 @@ var MIXED_TYPE_DICT = {
 var BUTTONS_TYPEFACES_PATH = "images/buttons_and_typefaces/"
 var RESULT_SAMPLES_PATH = "images/result_page_samples/"
 var RESULT_IMAGES_PATH = "images/result_page_images/"
-var LOOPS_FOLDER = "music/Loops/"
+var LOOPS_FOLDER = "music/loops/"
 
 
 	 /*------------------------*/
