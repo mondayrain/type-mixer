@@ -153,7 +153,7 @@ $(document).ready(function() {
 
 	 /*------------------------*/
 	/* -- HOVER AND CLICK  -- */
-   /*------------------------*/
+       /*------------------------*/
 	$(".button").click(function()
 	{
 
@@ -196,7 +196,7 @@ $(document).ready(function() {
 				
 				$("#main-page").fadeOut("slow", function()
 				{
-					$("#paired-page").fadeIn("slow");
+				    $("#paired-page").fadeIn("slow");
 				});
 			}
 		}
@@ -204,8 +204,6 @@ $(document).ready(function() {
 		/* BACK BUTTON */
 		else
 		{
-		/*prepare_main_page() */
-		
 			$("#paired-page").fadeOut("slow", function()
 			{
 				$("#main-page").fadeIn("slow");
@@ -438,7 +436,7 @@ $(document).ready(function() {
 
 	 /*---------------------------------*/
 	/* -- PREPARE PAIRED/MAIN PAGE  -- */
-   /*---------------------------------*/
+       /*---------------------------------*/
 
 	var prepare_paired_page = function()
 	{
